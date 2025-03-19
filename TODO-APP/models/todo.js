@@ -15,16 +15,17 @@ const todoSchema = new mongoose.Schema(
         createdAt: {
             type:Date,
             required:true,
-            default: Date.now(),
+            default: Date.now,
         },
         updatedAt:{
             type:Date,
             required:true,
-            default: Date.now(),
+            default: Date.now,
         }
 
     }
 );
 
+todoSchema.set("timestamps", true);
 
 module.exports = mongoose.model("Todo", todoSchema);
